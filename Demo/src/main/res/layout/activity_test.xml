@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:background="#550000"
+        android:orientation="horizontal">
+
+        <com.aigestudio.wheelpicker.widget.curved.WheelDayPicker
+            android:id="@+id/wdp_date"
+            android:layout_width="200dip"
+            android:layout_height="100dip"/>
+
+        <com.aigestudio.wheelpicker.widget.curved.WheelTimePicker
+            android:id="@+id/wtp_time"
+            android:layout_width="200dip"
+            android:layout_height="100dip"/>
+    </LinearLayout>
+
+    <com.aigestudio.wheelpicker.demo.TimeChooser
+        android:id="@+id/tc_timer"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"/>
+
+    <com.aigestudio.wheelpicker.demo.WheelDatePicker
+        android:id="@+id/wdp_d"
+        android:layout_width="match_parent"
+        android:layout_height="100dip"/>
+</LinearLayout>

@@ -1,10 +1,12 @@
 package com.aigestudio.wheelpicker.demo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -93,7 +95,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         findViewById(R.id.main_hour_btn).setOnClickListener(this);
         findViewById(R.id.main_minute_btn).setOnClickListener(this);
         findViewById(R.id.main_time_btn).setOnClickListener(this);
-
+        findViewById(R.id.to_self).setOnClickListener(this);
         dialog = new MainDialog(this);
     }
 
@@ -202,6 +204,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 dialog.setContentView(wheelTimePicker);
                 dialog.show();
                 break;
+            case R.id.to_self:
+                Toast.makeText(MainActivity.this,"点击之后",Toast.LENGTH_LONG).show();
+                Log.i("AAA","click my");
+                Intent intent = new Intent(this,TestActivity.class);
+                startActivity(intent);
+                break;
         }
     }
+
 }
